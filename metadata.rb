@@ -1,0 +1,7 @@
+name 'exampleloginapp'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures exampleloginapp'
+long_description 'Installs/Configures exampleloginapp'
+version '0.1.0'
