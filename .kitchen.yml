@@ -1,7 +1,7 @@
 ---
 driver:
-  name: vagrant
-
+#  name: docker
+  driver_plugin: docker_ssh
 provisioner:
   name: chef_zero
 
@@ -11,11 +11,15 @@ provisioner:
 #   name: inspec
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.1
+  - name: centos-7.0
 
 suites:
-  - name: default
+  - name: mysql
     run_list:
-      - recipe[exampleloginapp::default]
+      - recipe[exampleloginapp::mysql]
+    attributes:
+
+  - name: swarm_master
+    run_list:
+      - recipe[exampleloginapp::swarm_master]
     attributes:
