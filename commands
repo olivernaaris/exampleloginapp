@@ -1,5 +1,6 @@
 knife ec2 server create -N consul -x ec2-user -g sg-b2338ad7 -I ami-e1398992 -s subnet-c613fda2  -r 'role[consul]' --identity-file ../ssh-key
 
+knife ec2 server create -N mysql_master -x ec2-user -g sg-b2338ad7 -I ami-e1398992 -s subnet-c613fda2  -r 'role[mysql]' --identity-file ../ssh-key
 
 knife ec2 server create -N swarm_master1 -x ec2-user -g sg-b2338ad7 -I ami-e1398992 -s subnet-c613fda2  -r 'role[swarm_master]' --identity-file ../ssh-key
 
