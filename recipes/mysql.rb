@@ -17,12 +17,6 @@ mysql_service 'examplelogin' do
   action [:create, :start]
 end
 
-mysql_database 'exampleloginapp' do
-  connection mysql_connection_info
-  action :create
-end
-
-
 mysql_database_user 'tutorialuser' do
   connection mysql_connection_info
   password   'tutorialmy5ql'
